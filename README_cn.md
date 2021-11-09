@@ -5,17 +5,16 @@
    * [Nois2Noise-Paddle](#noise2noise-paddle)
       * [一、简介](#一简介)
       * [二、复现精度](#二复现精度)
-      * [三、对齐日志](#三对齐日志)
-      * [四、数据集](#四数据集)
-      * [五、环境依赖](#五环境依赖)
-      * [六、快速开始](#六快速开始)
+      * [三、数据集](#三数据集)
+      * [四、环境依赖](#四环境依赖)
+      * [五、快速开始](#五快速开始)
          * [step1: clone](#step1-clone)
          * [step2: 下载数据](#step2-下载数据)
          * [step3: 训练](#step3-训练)
          * [step4: 测试与评估](#step4-测试与评估)
-      * [七、代码结构与详细说明](#七代码结构)
-      * [八、结果展示](#八结果展示)
-      * [九、模型信息](#九模型信息)
+      * [六、代码结构与详细说明](#六代码结构)
+      * [七、结果展示](#七结果展示)
+      * [八、模型信息](#八模型信息)
 
 
 ## 一、简介
@@ -35,41 +34,13 @@
 | PSNR(gaussian-clean) | 31.63 | 32.21 | 32.19 |
 
 
-## 三、对齐日志
-
-在论文复现中，基于reprod_log的结果记录模块，产出下面若干文件。
-
-```
-log_reprod
-├── forward_paddle.npy
-├── forward_torch.npy
-├── metric_paddle.npy
-├── metric_torch.npy
-├── loss_paddle.npy
-├── loss_torch.npy
-├── bp_align_paddle.npy
-├── bp_align_torch.npy
-├── train_align_paddle.npy
-├── train_align_torch.npy
-```
-
-基于reprod_log的ReprodDiffHelper模块，产出下面5个日志文件。
-
-```
-├── forward_diff.log
-├── metric_diff.log
-├── loss_diff.log
-├── bp_align_diff.log
-├── train_align_diff.log
-```
-
-## 四、数据集
+## 三、数据集
 本项目使用[COCO 2017](http://cocodataset.org/#download)的验证集(1 GB)，并将该数据集划分为本程序的训练集和验证集。数据集划分的操作详见快速开始部分。
 
 将测试图片放到 `data/test` 路径。 本项目是用的是参考的pytorch项目所用的图片。
 
 
-## 五、环境依赖
+## 四、环境依赖
 - 框架: 
 * [PaddlePaddle](https://paddlepaddle.org.cn/) (2.1.2)
 * [NumPy](http://www.numpy.org/) (1.14.2)
@@ -77,7 +48,7 @@ log_reprod
 * [Pillow](https://pillow.readthedocs.io/en/latest/index.html) (5.2.0)
 
 
-## 六、快速开始
+## 五、快速开始
 
 ### step1: clone
 
@@ -162,7 +133,7 @@ python3 test.py \
   --cuda
 ```
 
-## 七、代码结构
+## 六、代码结构
 
 ```
 ├── ckpts  # 模型权重和训练日志
@@ -182,7 +153,7 @@ python3 test.py \
 └── requirements.txt
 ```
 
-## 八、结果展示
+## 七、结果展示
 
 <table align="center">
   <tr align="center">
@@ -202,7 +173,7 @@ python3 test.py \
   </tr> 
 </table>
 
-## 九、模型信息
+## 八、模型信息
 
 |  信息   |  说明 |
 |  ----  |  ----  |
