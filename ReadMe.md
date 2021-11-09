@@ -2,7 +2,7 @@
 
 English | [简体中文](./README_cn.md)
 
-This is an unofficial Paddle implementation of [Noise2Noise](https://arxiv.org/abs/1803.04189) (Lehtinen et al. 2018).
+This is a Paddle implementation of [Noise2Noise](https://arxiv.org/abs/1803.04189) (Lehtinen et al. 2018).
 
 ## Contents
 1. [Introduction](#introduction)
