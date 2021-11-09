@@ -7,13 +7,12 @@ This is an unofficial Paddle implementation of [Noise2Noise](https://arxiv.org/a
 ## Contents
 1. [Introduction](#introduction)
 2. [Reproduction Accuracy](#reproduction-accuracy)
-3. [Reprod_Log](#reprod-log)
-4. [Dataset](#dataset)
-5. [Environment](#environment)
-6. [Train](#train)
-7. [Test](#test)
-8. [Code Structure](#code-structure)
-9. [Result](result)
+3. [Dataset](#dataset)
+4. [Environment](#environment)
+5. [Train](#train)
+6. [Test](#test)
+7. [Code Structure](#code-structure)
+8. [Result](result)
 
 ## Introduction
 
@@ -30,31 +29,6 @@ In training, set batch size to 64.
 | PSNR(gaussian-denoised) | 31.61 | 32.16 | 32.35 |
 | PSNR(gaussian-clean) | 31.63 | 32.21 | 32.19 |
 
-## Reprod Log
-Based on 'reprod_log' model, the following documents are produced.
-```
-log_reprod
-├── forward_paddle.npy
-├── forward_torch.npy
-├── metric_paddle.npy
-├── metric_torch.npy
-├── loss_paddle.npy
-├── loss_torch.npy
-├── bp_align_paddle.npy
-├── bp_align_torch.npy
-├── train_align_paddle.npy
-├── train_align_torch.npy
-```
-
-Based on 'ReprodDiffHelper' model, the following five log files are produced.
-
-```
-├── forward_diff.log
-├── metric_diff.log
-├── loss_diff.log
-├── bp_align_diff.log
-├── train_align_diff.log
-```
 
 ## Dataset
 The authors use [ImageNet](http://image-net.org/download), but any dataset will do. [COCO 2017](http://cocodataset.org/#download) has a small validation set (1 GB) which can be nicely split into train/valid for easier training. For instance, to obtain a 4200/800 train/valid split you can do:
